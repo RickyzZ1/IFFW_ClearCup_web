@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collection Auction | IFFW Import</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-auction">
+  <div class="bg-orb orb-4" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html">IFFW Import</a>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="posts.html">Posts</a>
+      <a href="login.html">Partner Login</a>
+      <a class="nav-cta" href="auction.html">Collection Auction</a>
+    </nav>
+  </header>
+
+  <main class="auction-main">
+    <section class="section auction-hero" data-reveal>
+      <p class="eyebrow">Live Collection Auction</p>
+      <h1>Each bid should improve farmer outcomes, not just bean prices.</h1>
+      <p>
+        Every lot includes quality metrics and social sustainability signals:
+        traceability ID, SCA score, consistency, payout ratio, and risk-sharing terms.
+      </p>
+      <p id="member-note" class="member-note">Guest mode: sign in to save watchlists and bidding history.</p>
+    </section>
+
+    <section class="section lots-grid" data-reveal>
+      <article class="lot-card" data-current-bid="18.5">
+        <img class="lot-cover" src="assets/yunnan.jpg" alt="Yunnan coffee origin">
+        <h2><a class="lot-title-link" href="origin-yunnan.html">Lot A01 | Yunnan Honey Process</a></h2>
+        <p class="lot-meta">SCA 86.5 | Consistency 82 | Est. Yield 14 bags</p>
+        <div class="lot-tags">
+          <span>Farmer Payout: 52%</span>
+          <span>Min Guarantee: $14.20/lb</span>
+          <span>Advance Payment: 30%</span>
+          <span>Trace ID: YN-24-HNY-01</span>
+        </div>
+        <div class="lot-story">
+          <p class="lot-story-title">Origin Story</p>
+          <p>
+            In Yunnan, many smallholder families have treated coffee as a long-term livelihood, not a side crop.
+            This honey-process lot reflects careful cherry selection and patient drying decisions made lot by lot.
+          </p>
+          <p>
+            The cup profile shows bright stone fruit, cocoa sweetness, and a clean finish.
+            For these households, quality is directly tied to income stability across the year.
+          </p>
+          <p class="farmer-quote">"Coffee is our family's work and pride. Better quality means a better year at home."</p>
+        </div>
+        <a class="btn btn-ghost btn-story" href="origin-yunnan.html">Read Full Origin Story</a>
+        <p class="lot-price">Current Bid: <span class="price-value">$18.50/lb</span></p>
+        <p class="lot-timer">Ends in: <span data-countdown="2026-03-18T18:00:00"></span></p>
+        <form class="bid-form">
+          <label>
+            Your Bid ($/lb)
+            <input type="number" step="0.1" min="18.6" placeholder="18.6" required>
+          </label>
+          <button class="btn btn-solid" type="submit">Place Bid</button>
+        </form>
+        <p class="feedback" aria-live="polite"></p>
+      </article>
+
+      <article class="lot-card" data-current-bid="22.3">
+        <img class="lot-cover" src="assets/ethopia_farm.jpg" alt="Ethiopia coffee origin">
+        <h2><a class="lot-title-link" href="origin-ethiopia-washed.html">Lot B07 | Ethiopia Washed Heirloom</a></h2>
+        <p class="lot-meta">SCA 88.0 | Consistency 84 | Est. Yield 10 bags</p>
+        <div class="lot-tags">
+          <span>Farmer Payout: 49%</span>
+          <span>Min Guarantee: $16.80/lb</span>
+          <span>Advance Payment: 25%</span>
+          <span>Trace ID: ET-25-WSH-07</span>
+        </div>
+        <div class="lot-story">
+          <p class="lot-story-title">Origin Story</p>
+          <p>
+            This washed heirloom lot comes from farming families who treat processing as craft.
+            From harvest timing to washing and drying-bed management, quality is built through daily discipline.
+          </p>
+          <p>
+            In the cup, floral aromatics and citrus clarity reflect that precision.
+            Coffee is the core cash crop for many of these homes, so consistency is both professional pride and economic necessity.
+          </p>
+          <p class="farmer-quote">"We taste every season in the cup. Quality is how we protect our livelihood."</p>
+        </div>
+        <a class="btn btn-ghost btn-story" href="origin-ethiopia-washed.html">Read Full Origin Story</a>
+        <p class="lot-price">Current Bid: <span class="price-value">$22.30/lb</span></p>
+        <p class="lot-timer">Ends in: <span data-countdown="2026-03-16T21:30:00"></span></p>
+        <form class="bid-form">
+          <label>
+            Your Bid ($/lb)
+            <input type="number" step="0.1" min="22.4" placeholder="22.4" required>
+          </label>
+          <button class="btn btn-solid" type="submit">Place Bid</button>
+        </form>
+        <p class="feedback" aria-live="polite"></p>
+      </article>
+
+      <article class="lot-card" data-current-bid="19.1">
+        <img class="lot-cover" src="assets/ethopia2.jpg" alt="Ethiopia highland coffee origin">
+        <h2><a class="lot-title-link" href="origin-ethiopia-highland.html">Lot C03 | Ethiopia Highland Natural</a></h2>
+        <p class="lot-meta">SCA 87.2 | Consistency 80 | Est. Yield 8 bags</p>
+        <div class="lot-tags">
+          <span>Farmer Payout: 55%</span>
+          <span>Min Guarantee: $15.10/lb</span>
+          <span>Advance Payment: 35%</span>
+          <span>Trace ID: ET-25-HLD-03</span>
+        </div>
+        <div class="lot-story">
+          <p class="lot-story-title">Origin Story</p>
+          <p>
+            At this highland site, coffee has been the backbone of household income for generations.
+            The natural process is handled with close attention to sorting and drying pace to preserve sweetness and structure.
+          </p>
+          <p>
+            This lot delivers berry notes, ripe fruit character, and a syrupy body.
+            Behind that profile are families whose everyday labor in coffee shapes both product quality and daily life.
+          </p>
+          <p class="farmer-quote">"Coffee is not only what we sell. It is how we live, and how we build our future."</p>
+        </div>
+        <a class="btn btn-ghost btn-story" href="origin-ethiopia-highland.html">Read Full Origin Story</a>
+        <p class="lot-price">Current Bid: <span class="price-value">$19.10/lb</span></p>
+        <p class="lot-timer">Ends in: <span data-countdown="2026-03-19T14:45:00"></span></p>
+        <form class="bid-form">
+          <label>
+            Your Bid ($/lb)
+            <input type="number" step="0.1" min="19.2" placeholder="19.2" required>
+          </label>
+          <button class="btn btn-solid" type="submit">Place Bid</button>
+        </form>
+        <p class="feedback" aria-live="polite"></p>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
