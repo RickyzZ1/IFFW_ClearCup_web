@@ -112,6 +112,50 @@ if (countdownNodes.length > 0) {
   }, 1000);
 }
 
+function formatUsdPerLb(value) {
+  return `$${value.toFixed(2)}/lb`;
+}
+
+function updatePriceTransparency(card) {
+  const currentBid = Number(card.dataset.currentBid || "0");
+  const payoutRatio = Number(card.dataset.payoutRatio || "0");
+  const livingPrice = Number(card.dataset.livingPrice || "0");
+  const minimumGuarantee = Number(card.dataset.minGuarantee || "0");
+  const farmerReturn = currentBid * payoutRatio;
+  const gap = farmerReturn - livingPrice;
+
+  const returnNode = card.querySelector("[data-field='farmer-return']");
+  const livingNode = card.querySelector("[data-field='living-price']");
+  const statusNode = card.querySelector("[data-field='fair-status']");
+  const noteNode = card.querySelector("[data-field='fair-note']");
+
+  if (returnNode) returnNode.textContent = formatUsdPerLb(farmerReturn);
+  if (livingNode) livingNode.textContent = formatUsdPerLb(livingPrice);
+
+  if (statusNode) {
+    statusNode.classList.remove("is-fair", "is-gap");
+    if (gap >= 0) {
+      statusNode.classList.add("is-fair");
+      statusNode.textContent = `Fair income check: benchmark met (+$${gap.toFixed(2)}/lb).`;
+    } else {
+      statusNode.classList.add("is-gap");
+      statusNode.textContent = `Fair income check: below benchmark by $${Math.abs(gap).toFixed(2)}/lb.`;
+    }
+  }
+
+  if (noteNode) {
+    noteNode.textContent =
+      `At current bid, estimated farmer return is ${formatUsdPerLb(farmerReturn)} ` +
+      `(payout ratio ${(payoutRatio * 100).toFixed(0)}%). ` +
+      `Minimum guarantee starts at ${formatUsdPerLb(minimumGuarantee)}.`;
+  }
+}
+
+const lotCards = document.querySelectorAll(".lot-card");
+if (lotCards.length > 0) {
+  lotCards.forEach(updatePriceTransparency);
+}
+
 const bidForms = document.querySelectorAll(".bid-form");
 if (bidForms.length > 0) {
   bidForms.forEach((form) => {
@@ -133,6 +177,7 @@ if (bidForms.length > 0) {
 
       card.dataset.currentBid = nextBid.toFixed(2);
       priceNode.textContent = `$${nextBid.toFixed(2)}/lb`;
+      updatePriceTransparency(card);
       input.min = (nextBid + 0.1).toFixed(1);
       input.value = "";
       feedback.textContent = `Bid accepted. Leading price is now $${nextBid.toFixed(2)}/lb.`;

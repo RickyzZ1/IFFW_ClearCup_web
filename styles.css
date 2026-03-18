@@ -613,6 +613,74 @@ select {
   margin-bottom: 0;
 }
 
+.price-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #fefbf7, #f4ece1);
+  padding: 12px;
+  margin: 0 0 12px;
+}
+
+.price-card-title {
+  margin: 0;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-size: 1.02rem;
+}
+
+.price-card-sub {
+  margin: 4px 0 10px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.price-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  border-top: 1px dashed rgba(36, 23, 13, 0.16);
+  padding: 8px 0;
+  font-size: 0.88rem;
+  align-items: center;
+}
+
+.price-row:first-of-type {
+  border-top: 0;
+  padding-top: 2px;
+}
+
+.price-row span {
+  color: #5f4a3d;
+}
+
+.price-row strong {
+  color: #2f1f15;
+}
+
+.price-row.emphasis strong {
+  color: var(--accent);
+}
+
+.price-status {
+  margin: 8px 0 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.price-status.is-fair {
+  color: #1f6a46;
+}
+
+.price-status.is-gap {
+  color: #99441f;
+}
+
+.price-note {
+  margin: 6px 0 0;
+  color: #5d493d;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
 .farmer-quote {
   margin-top: 10px;
   padding-left: 10px;
