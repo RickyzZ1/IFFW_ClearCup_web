@@ -43,7 +43,7 @@ if (signInForm) {
     if (!email || !role) return;
 
     localStorage.setItem(
-      "iffw_member",
+      "clearcup_member",
       JSON.stringify({
         email,
         role,
@@ -71,7 +71,7 @@ if (signUpForm) {
 
 const memberNote = document.getElementById("member-note");
 if (memberNote) {
-  const memberRaw = localStorage.getItem("iffw_member");
+  const memberRaw = localStorage.getItem("clearcup_member");
   if (memberRaw) {
     try {
       const member = JSON.parse(memberRaw);
