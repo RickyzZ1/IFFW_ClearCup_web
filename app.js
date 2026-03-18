@@ -184,3 +184,21 @@ if (bidForms.length > 0) {
     });
   });
 }
+
+const trackFilterButtons = document.querySelectorAll("[data-track-filter]");
+const trackCards = document.querySelectorAll("[data-track-origin]");
+
+if (trackFilterButtons.length > 0 && trackCards.length > 0) {
+  trackFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.trackFilter || "all";
+      trackFilterButtons.forEach((b) => b.classList.toggle("is-active", b === button));
+
+      trackCards.forEach((card) => {
+        const origin = card.dataset.trackOrigin || "";
+        const show = filter === "all" || origin === filter;
+        card.classList.toggle("is-hidden", !show);
+      });
+    });
+  });
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track | IFFW Import</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-track">
+  <div class="bg-orb orb-3" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html">IFFW Import</a>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="posts.html">Posts</a>
+      <a href="track.html">Track</a>
+      <a href="auction.html">Collection Auction</a>
+      <a class="nav-cta" href="login.html">Partner Login</a>
+    </nav>
+  </header>
+
+  <main class="track-main">
+    <section class="section track-hero" data-reveal>
+      <p class="eyebrow">Impact Tracking</p>
+      <h1>What changed after trade: income, household life, and producer voices.</h1>
+      <p>
+        We track partner lots beyond transaction day. For each farmer group, we review trade outcomes,
+        interview households, and log practical life changes. Visit cadence is set at every 6 months.
+      </p>
+      <div class="track-meta">
+        <span>Review Cycle: Semiannual (every 6 months)</span>
+        <span>Focus: Income fairness + quality continuity + household wellbeing</span>
+      </div>
+    </section>
+
+    <section class="section track-controls" data-reveal>
+      <button class="track-btn is-active" type="button" data-track-filter="all">All Origins</button>
+      <button class="track-btn" type="button" data-track-filter="yunnan">Yunnan</button>
+      <button class="track-btn" type="button" data-track-filter="ethiopia">Ethiopia</button>
+    </section>
+
+    <section class="section track-grid" data-reveal>
+      <article class="track-card" data-track-origin="yunnan">
+        <div class="track-card-head">
+          <p class="track-origin">Yunnan</p>
+          <p class="track-status">On Schedule</p>
+        </div>
+        <h2>Gaoligong Smallholder Cluster</h2>
+        <p class="track-sub">Partner since: Jan 2025 | Households: 16</p>
+        <div class="track-metrics">
+          <p><span>Avg farm-gate price before</span><strong>$7.90/lb</strong></p>
+          <p><span>Avg farm-gate price now</span><strong>$9.70/lb</strong></p>
+          <p><span>Income change</span><strong>+22.8%</strong></p>
+          <p><span>Next field visit</span><strong>Sep 2026</strong></p>
+        </div>
+        <p class="track-quote">
+          "We still work hard every season, but now we can plan school and fertilizer spending with less panic."
+        </p>
+        <ul class="clean-list">
+          <li>2 households shifted from short-term debt to seasonal budgeting.</li>
+          <li>Post-harvest drying consistency improved in 3 consecutive rounds.</li>
+        </ul>
+      </article>
+
+      <article class="track-card" data-track-origin="ethiopia">
+        <div class="track-card-head">
+          <p class="track-origin">Ethiopia (Washed)</p>
+          <p class="track-status">On Schedule</p>
+        </div>
+        <h2>Sidama Micro-Station Group</h2>
+        <p class="track-sub">Partner since: Mar 2025 | Households: 24</p>
+        <div class="track-metrics">
+          <p><span>Avg farm-gate price before</span><strong>$8.60/lb</strong></p>
+          <p><span>Avg farm-gate price now</span><strong>$10.10/lb</strong></p>
+          <p><span>Income change</span><strong>+17.4%</strong></p>
+          <p><span>Next field visit</span><strong>Oct 2026</strong></p>
+        </div>
+        <p class="track-quote">
+          "When payment timing is clearer, we can maintain processing quality without cutting household essentials."
+        </p>
+        <ul class="clean-list">
+          <li>Maintenance budget added for washing channels and drying beds.</li>
+          <li>Interviewed families report fewer delayed school payments.</li>
+        </ul>
+      </article>
+
+      <article class="track-card" data-track-origin="ethiopia">
+        <div class="track-card-head">
+          <p class="track-origin">Ethiopia (Highland Natural)</p>
+          <p class="track-status">On Schedule</p>
+        </div>
+        <h2>Highland Family Producer Network</h2>
+        <p class="track-sub">Partner since: Jun 2025 | Households: 19</p>
+        <div class="track-metrics">
+          <p><span>Avg farm-gate price before</span><strong>$8.10/lb</strong></p>
+          <p><span>Avg farm-gate price now</span><strong>$10.40/lb</strong></p>
+          <p><span>Income change</span><strong>+28.4%</strong></p>
+          <p><span>Next field visit</span><strong>Dec 2026</strong></p>
+        </div>
+        <p class="track-quote">
+          "Being recognized for quality changed how we price our work and how our families see the future."
+        </p>
+        <ul class="clean-list">
+          <li>Household savings behavior increased after two stable trade cycles.</li>
+          <li>Quality sorting discipline improved and defect rates dropped.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
